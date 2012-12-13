@@ -1,0 +1,11 @@
+# Read about fixtures at http://api.rubyonrails.org/classes/ActiveRecord/Fixtures.html
+
+one:
+  module_id: 1
+  name: MyString
+  page_element_id: 1
+
+two:
+  module_id: 1
+  name: MyString
+  page_element_id: 1

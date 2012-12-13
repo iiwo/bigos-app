@@ -1,0 +1,20 @@
+<%=
+    collection_table(@pages, :id=>"pages-table") do |t|
+        t.header :name
+        t.header :type
+        t.header :label
+        t.header :position
+        t.header :elements
+        t.header :is_visible
+
+        t.rows.alternate = :odd
+        t.rows.each do |row, item, index|
+            row.name
+            row.type
+            row.label
+            row.position
+            row.elements
+            row.is_visible
+        end
+    end
+%>

@@ -1,0 +1,11 @@
+# Read about fixtures at http://api.rubyonrails.org/classes/ActiveRecord/Fixtures.html
+
+one:
+  name: MyString
+  type: 
+  is_admin_visible: false
+
+two:
+  name: MyString
+  type: 
+  is_admin_visible: false

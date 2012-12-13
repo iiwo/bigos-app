@@ -1,0 +1,19 @@
+# Read about fixtures at http://api.rubyonrails.org/classes/ActiveRecord/Fixtures.html
+
+one:
+  name: MyString
+  type: 
+  label: MyString
+  position: 1
+  page_template_id: 1
+  elements: MyText
+  is_visible: false
+
+two:
+  name: MyString
+  type: 
+  label: MyString
+  position: 1
+  page_template_id: 1
+  elements: MyText
+  is_visible: false
