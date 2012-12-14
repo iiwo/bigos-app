@@ -24,7 +24,7 @@ Gem::Specification.new do |s|
   s.add_dependency "zurb-foundation"
   s.add_dependency "devise"
   s.add_dependency "cancan"
-  s.add_dependency "rolify"
+  s.add_dependency "simple_roles"
   s.add_dependency "simple_form"
   s.add_dependency 'table_helper'
   s.add_dependency 'kaminari'

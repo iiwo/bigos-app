@@ -1,7 +1,7 @@
 <ul id="">
 <%=
-  content_tag_for(:li, @items, :class => "item") do |item|
-    link_to item.name, item
+  content_tag_for(:li, @pages, :class => "page") do |item|
+    page.label
   end
 %>
 </ul>

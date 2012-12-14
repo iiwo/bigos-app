@@ -8,5 +8,6 @@ module BigosApp
     # Setup accessible (or protected) attributes for your model
     attr_accessible :email, :password, :password_confirmation, :remember_me
     # attr_accessible :title, :body
+    simple_roles
   end
 end

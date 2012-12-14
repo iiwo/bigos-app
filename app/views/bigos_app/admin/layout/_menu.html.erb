@@ -1,0 +1,7 @@
+<ul id="">
+<%=
+  content_tag_for(:li, @pages, :class => "page") do |item|
+    link_to page.label, admin_page(page)
+  end
+%>
+</ul>
