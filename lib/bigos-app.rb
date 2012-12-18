@@ -6,6 +6,7 @@ require "coffee-rails"
 require "compass-rails"
 require "zurb-foundation"
 require "simple_form"
+require "cancan"
 
 module BigosApp
 end
