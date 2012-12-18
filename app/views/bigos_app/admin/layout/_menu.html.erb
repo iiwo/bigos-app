@@ -1,7 +1,22 @@
-<ul id="">
-<%=
-  content_tag_for(:li, @pages, :class => "page") do |item|
-    link_to page.label, admin_page(page)
-  end
-%>
+<ul class="nav-bar vertical">
+<% @pages.all.each do |page| %>
+  <li class="<%= page.subpages.length > 0 ? 'has-flyout' : '' %>">
+    <%= link_to page.name || page.label, admin_page_path(page) %>
+    <% if page.subpages.length > 0  %>
+        <%= link_to("#", :class=>"flyout-toggle") do %>
+            <span></span>
+        <% end %>
+        <ul class="flyout">
+            <% page.subpages.all.each do |page| %>
+                <li>
+                <%= link_to page.name || page.label, admin_page_path(page) %>
+                </li>
+            <% end %>
+        </ul>
+    <% end %>
+  </li>
+<% end %>
 </ul>
+<% if current_admin_user.is_superadmin? %>
+    <%= link_to "ADD PAGE", new_admin_page_path %>
+<% end %>

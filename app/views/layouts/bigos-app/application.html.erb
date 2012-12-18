@@ -5,10 +5,14 @@
   <%= stylesheet_link_tag    "bigos_app/application", :media => "all" %>
   <%= javascript_include_tag "bigos_app/application" %>
   <%= csrf_meta_tags %>
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
 </head>
 <body>
-
-<%= yield %>
-
+<div class="row">
+  <%= render :partial=>"bigos_app/shared/menu" %>
+</div>
+<div class="row">
+    <%= yield %>
+</div>
 </body>
 </html>

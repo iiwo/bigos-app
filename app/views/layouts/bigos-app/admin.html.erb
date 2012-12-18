@@ -2,13 +2,30 @@
 <html>
 <head>
   <title>BigosApp</title>
-  <%= stylesheet_link_tag    "bigos_app/admin", :media => "all" %>
-  <%= javascript_include_tag "bigos_app/admin" %>
+  <%= stylesheet_link_tag "bigos_app/admin/admin", :media => "all" %>
+  <%= javascript_include_tag "bigos_app/admin/admin" %>
   <%= csrf_meta_tags %>
 </head>
+<meta name="viewport" content="width=device-width, initial-scale=1.0"/>
 <body>
-
-<%= yield %>
-
+<div class="row">
+    <h5>Admin Panel</h5>
+</div>
+<div class="row">
+  <div class="twelve columns">
+    <ul class="nav-bar">
+      <li class="right"><%= link_to "SIGN OUT", "/admin_users/logout", :method=>:delete %></li>
+    </ul>
+  </div>
+</div>
+<div class="row">
+  <div class="two columns">
+    <%= render :partial=>"bigos_app/admin/layout/menu" %>
+    <%= render :partial=>"bigos_app/admin/layout/templates_menu" %>
+  </div>
+  <div class="ten columns">
+    <%= yield %>
+  </div>
+</div>
 </body>
 </html>

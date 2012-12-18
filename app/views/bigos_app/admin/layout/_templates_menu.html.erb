@@ -1,0 +1,10 @@
+<% if current_admin_user.is_superadmin? %>
+    <ul class="nav-bar vertical">
+        <% @page_templates.each do |page_template| %>
+          <li>
+            <%= link_to page_template.name, admin_page_template_path(page_template) %>
+          </li>
+        <% end %>
+    </ul>
+    <%= link_to "ADD PAGE TEMPLATE", new_admin_page_template_path %>
+<% end %>

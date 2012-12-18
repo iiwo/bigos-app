@@ -1,0 +1,20 @@
+<div class="fixed contain-to-grid">
+    <nav class="top-bar">
+    <ul class="">
+    <% @pages.all.each do |page| %>
+      <li class="<%= page.subpages.length > 0 ? 'has-dropdown' : '' %>">
+        <%= link_to page.name || page.label, page_path(page) %>
+        <% if page.subpages.length > 0  %>
+            <ul class="dropdown">
+                <% page.subpages.all.each do |page| %>
+                    <li>
+                    <%= link_to page.label || page.name, page_path(page) %>
+                    </li>
+                <% end %>
+            </ul>
+        <% end %>
+      </li>
+    <% end %>
+    </ul>
+    </nav>
+</div>
