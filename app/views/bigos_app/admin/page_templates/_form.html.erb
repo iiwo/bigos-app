@@ -1,0 +1,7 @@
+<%= simple_form_for [:admin,@page_template] do |f| %>
+  <%= f.input :name %>
+  <%= f.input :position %>
+  <%# f.association:parent_page, :collection => @pages %>
+  <%# f.association :page_template %>
+  <%= f.button :submit %>
+<% end %>
