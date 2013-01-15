@@ -1,0 +1,10 @@
+<h2><%= @page.name  %></h2>
+
+<ul>
+  <% @page.page_elements.each do |element| %>
+    <li><%= element.class.class_name %></li>
+  <% end %>
+</ul>
+
+<%= link_to "Edit", edit_admin_page_path(@page) %>
+<%= link_to 'Destroy', admin_page_path, method: :delete, data: { confirm: 'Are you sure?' } %>

@@ -7,17 +7,42 @@ module BigosApp
       @page = BigosApp::Page.new
     end
 
+    def edit
+      @page = BigosApp::Page.find(params[:id])
+    end
+
     def show
+      @page = BigosApp::Page.find(params[:id])
     end
 
     def create
       @page = BigosApp::Page.new(params[:page])
+      @page_template = BigosApp::PageTemplate.find params[:page][:page_template_id]
+
       if (@page.save)
+       @page_template.getPageElements @page.id
         redirect_to action: :show, :id=>@page.id
       else
         redirect_to action: :new
       end
     end
+
+    def update
+      @page = BigosApp::Page.find(params[:id])
+      if (@page.update_attributes(params[:page]))
+        redirect_to action: :show, :id => @page.id
+      else
+        redirect_to action: :edit, :id => @page.id
+      end
+    end
+
+    def destroy
+      @page = BigosApp::Page.find(params[:id])
+      @page.destroy
+
+      redirect_to admin_root_path
+    end
+
 
   end
 end

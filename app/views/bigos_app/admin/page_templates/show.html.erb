@@ -1,0 +1,9 @@
+<h2><%= @page_template.name  %></h2>
+
+<ul>
+  <% @elements.each do |element| %>
+    <li><%= pluralize(element.last.to_i, eval(element.first).class_name) %></li>
+  <% end unless @elements.blank? %>
+</ul>
+<%= link_to "Edit", edit_admin_page_template_path(@page_template) %>
+<%= link_to 'Destroy', admin_page_template_path, method: :delete, data: { confirm: 'Are you sure?' } %>
