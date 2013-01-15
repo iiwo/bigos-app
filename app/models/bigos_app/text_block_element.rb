@@ -1,7 +1,7 @@
 module BigosApp
   class TextBlockElement < PageElement
-    has_one :text_block
-    after_save :add_text_block, :dependent => :destroy
+    has_one :text_block, :dependent => :destroy
+    after_save :add_text_block
 
     def add_text_block
       self.text_block = BigosApp::TextBlock.create if self.text_block.blank?
