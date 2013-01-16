@@ -14,7 +14,7 @@
            pe.simple_fields_for :text_block do |tb|
              render partial: "bigos_app/admin/text_blocks/form", locals: {tb:tb}
            end
-            when BigosApp::GalleryElement.to_s
+        when BigosApp::GalleryElement.to_s
           pe.simple_fields_for :gallery do |g|
             render partial: "bigos_app/admin/galleries/form", locals: {g:g}
           end

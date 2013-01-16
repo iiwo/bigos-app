@@ -1,0 +1,9 @@
+<%= g.input :title  %>
+<% g.simple_fields_for BigosApp::GalleryImage.new(gallery_id: g.object.id) do |gin| %>
+    <% render partial: "bigos_app/admin/gallery_images/form", locals: {gi:gin}  %>
+<% end%>
+<%= g.simple_fields_for :gallery_images do |gi|%>
+  <%= render partial: "bigos_app/admin/gallery_images/form", locals: {gi:gi} %>
+<% end %>
+
+<%= submit_tag "Add new image", class: "button"  %>
