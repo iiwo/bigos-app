@@ -7,8 +7,8 @@ require "bigos-app/version"
 Gem::Specification.new do |s|
   s.name        = "bigos-app"
   s.version     = BigosApp::VERSION
-  s.authors     = ["Iwo Dziechciarow"]
-  s.email       = ["iiwo@o2.pl"]
+  s.authors     = ["Iwo Dziechciarow", "Artur Kremens"]
+  s.email       = ["iiwo@o2.pl", "kremenso@o2.pl"]
   s.homepage    = "tremor.pl"
   s.summary     = "Bigos Restaurant CMS Application Engine"
   s.description = "Bigos Restaurant CMS Application Engine"

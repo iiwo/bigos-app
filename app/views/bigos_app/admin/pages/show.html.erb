@@ -7,4 +7,6 @@
 </ul>
 
 <%= link_to "Edit", edit_admin_page_path(@page) %>
-<%= link_to 'Destroy', admin_page_path, method: :delete, data: { confirm: 'Are you sure?' } %>
+<% if current_admin_user.is_superadmin? %>
+  <%= link_to 'Destroy', admin_page_path, method: :delete, data: { confirm: 'Are you sure?' } %>
+<% end %>
