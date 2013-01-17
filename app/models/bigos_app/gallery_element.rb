@@ -1,6 +1,7 @@
 module BigosApp
   class GalleryElement < PageElement
     has_one :gallery
+    has_many :gallery_images, :through => :gallery
     after_save :add_gallery
 
     accepts_nested_attributes_for :gallery

@@ -1,3 +1,9 @@
-<%= gi.input :title  %>
-<%= gi.input :href  %>
-<%= gi.input :image  %>
+<div class="nested-fields">
+  <%= field_set_tag "Image" do %>
+    <%= f.input :title  %>
+    <%= f.input :href  %>
+    <%= f.input :image, as: "file", :hint => f.object.try(:image).try(:blank?) ? "" : f.template.image_tag(f.object.try(:image).try(:url, :thumb))  %>
+    <% hide_link ||= false %>
+    <%= link_to_remove_association "remove image", f unless hide_link %>
+  <% end %>
+</div>

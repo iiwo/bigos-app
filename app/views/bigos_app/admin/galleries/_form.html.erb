@@ -1,9 +1,9 @@
 <%= g.input :title  %>
-<% g.simple_fields_for BigosApp::GalleryImage.new(gallery_id: g.object.id) do |gin| %>
-    <% render partial: "bigos_app/admin/gallery_images/form", locals: {gi:gin}  %>
-<% end%>
-<%= g.simple_fields_for :gallery_images do |gi|%>
-  <%= render partial: "bigos_app/admin/gallery_images/form", locals: {gi:gi} %>
-<% end %>
+<div id="gallery_images">
+  <%= g.simple_fields_for :gallery_images do |gi|%>
+    <%= render partial: "bigos_app/admin/gallery_images/form", locals: {f:gi, hide_link: true} %>
+  <% end %>
+  <%= link_to_add_association 'add image', g, :gallery_images, :partial => "bigos_app/admin/gallery_images/form", "data-association-insertion-method" => "after" %>
+</div>
 
-<%= submit_tag "Add new image", class: "button"  %>
+

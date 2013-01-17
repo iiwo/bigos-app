@@ -1,7 +1,8 @@
 //= require jquery
 //= require jquery_ujs
 //= require foundation
-//= require  tinymce
+//= require tinymce
+//= require cocoon
 
 
 

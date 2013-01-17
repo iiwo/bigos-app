@@ -33,6 +33,10 @@ Gem::Specification.new do |s|
   s.add_dependency 'jquery-ui-rails'
   s.add_dependency "remotipart", "~> 1.0"
   s.add_dependency "tinymce-rails"
+  s.add_dependency "cocoon"
+  s.add_dependency "rmagick"
+  s.add_dependency "fog"
+
 
   s.add_development_dependency "pg"
 end
