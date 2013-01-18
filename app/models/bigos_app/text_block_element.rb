@@ -13,5 +13,9 @@ module BigosApp
       "Text Block"
     end
 
+    def name
+      self.text_block.title
+    end
+
   end
 end

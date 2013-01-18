@@ -1,6 +1,6 @@
 module BigosApp
   class GalleryElement < PageElement
-    has_one :gallery
+    has_one :gallery, :dependent => :destroy
     has_many :gallery_images, :through => :gallery
     after_save :add_gallery
 
@@ -14,6 +14,10 @@ module BigosApp
 
     def self.class_name
       "Gallery"
+    end
+
+    def name
+      self.gallery.title
     end
 
   end
