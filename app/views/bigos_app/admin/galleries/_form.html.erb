@@ -1,4 +1,5 @@
 <%= g.input :title  %>
+<%= g.input :is_background, :label => "Use as background" %>
 <div id="gallery_images">
   <%= g.simple_fields_for :gallery_images do |gi|%>
     <%= render partial: "bigos_app/admin/gallery_images/form", locals: {f:gi, hide_link: true} %>

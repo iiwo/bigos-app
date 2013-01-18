@@ -4,7 +4,7 @@
           when BigosApp::TextBlockElement.to_s
             render partial: "bigos_app/text_blocks/item", locals: {tb:pe.text_block}
           when BigosApp::GalleryElement.to_s
-            render partial: "bigos_app/galleries/item", locals: {g:pe.gallery}
+            render partial: "#{pe.gallery.is_background ? 'bigos_app/galleries/background' : 'bigos_app/galleries/item'}", locals: {g:pe.gallery}
           else
             pe.class.class_name
         end %>

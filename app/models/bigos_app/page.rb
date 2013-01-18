@@ -7,6 +7,7 @@ module BigosApp
     has_many :page_elements, :dependent => :destroy
     belongs_to :page_template
     before_update :check_template
+    has_many :background_elements, :class_name=>"BigosApp::GalleryElement"
 
     accepts_nested_attributes_for :page_elements
 
