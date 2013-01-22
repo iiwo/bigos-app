@@ -1,5 +1,6 @@
 <%= simple_form_for [:admin,@page] do |f| %>
   <%= f.association:parent_page, :collection => @pages %>
+  <%= f.input :template, :collection => @files %>
   <%= f.association :page_template %>
   <%= f.input :is_visible %>
   <%= f.input :label %>

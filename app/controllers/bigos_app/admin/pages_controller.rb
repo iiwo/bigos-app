@@ -5,10 +5,12 @@ module BigosApp
 
     def new
       @page = BigosApp::Page.new
+      @files = Dir.glob("app/views/bigos_app/pages/*")
     end
 
     def edit
       @page = BigosApp::Page.find(params[:id])
+      @files = Dir.glob("app/views/bigos_app/pages/*")
     end
 
     def show
