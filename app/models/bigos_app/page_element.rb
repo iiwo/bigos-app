@@ -15,7 +15,7 @@ module BigosApp
             BigosApp::ProductElement
         ]
 
-
+        a << BigosApp::BigosContactBoxElement unless defined?(BigosContactBox).blank?
         a << BigosApp::BigosTwitterBoxElement unless defined?(BigosTwitterBox).blank?
         a << BigosApp::BigosInstagramBoxElement unless defined?(BigosInstagramBox).blank?
         a
