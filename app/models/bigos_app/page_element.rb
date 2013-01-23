@@ -14,7 +14,7 @@ module BigosApp
             BigosApp::GalleryElement,
             BigosApp::ProductElement
         ]
-        a << Object.const_get("BigosTwitterBox")
+        a << BigosApp::BigosTwitterBoxElement  if Object.const_get("BigosTwitterBox")
       end
 
       def class_name
