@@ -25,7 +25,7 @@ module BigosApp
       unless self.template.blank?
         "../../" + self.template
       else
-        "bigos_app/pages/show"
+        "bigos_twitter_module/pages/show"
       end
     end
 

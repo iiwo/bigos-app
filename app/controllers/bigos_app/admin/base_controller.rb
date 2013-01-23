@@ -1,4 +1,4 @@
-require_dependency "bigos_app/application_controller"
+require_dependency "bigos_twitter_module/application_controller"
 
 module BigosApp
   class Admin::BaseController < ApplicationController

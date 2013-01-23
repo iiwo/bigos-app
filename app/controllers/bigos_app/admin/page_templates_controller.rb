@@ -1,4 +1,4 @@
-require_dependency "bigos_app/admin/base_controller"
+require_dependency "bigos_twitter_module/admin/base_controller"
 
 module BigosApp
 
