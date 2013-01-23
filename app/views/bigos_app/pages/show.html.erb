@@ -9,6 +9,8 @@
             render partial: "bigos_app/products/item", locals: {pc:pe.product_category}
           when BigosApp::BigosTwitterBoxElement.to_s
             render partial: "bigos_app/bigos_twitter_module/item"
+          when BigosApp::BigosInstagramBoxElement.to_s
+            render partial: "bigos_app/bigos_instagram_module/item"
           else
             pe.class.class_name + " " + pe.class.to_s
         end %>

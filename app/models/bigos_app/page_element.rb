@@ -16,6 +16,7 @@ module BigosApp
         ]
 
         a << BigosApp::BigosTwitterBoxElement unless Object.const_get("BigosTwitterBox").blank?
+        a << BigosApp::BigosInstagramBoxElement unless Object.const_get("BigosInstagramBox").blank?
         a
       end
 
