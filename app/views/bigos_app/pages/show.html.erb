@@ -10,6 +10,6 @@
           when BigosApp::BigosTwitterBoxElement.to_s
             render partial: "bigos_app/bigos_twitter_module/item", locals: {pc:pe.product_category}
           else
-            pe.class.class_name
+            pe.class.class_name + " " + pe.class.to_s
         end %>
 <% end %>
