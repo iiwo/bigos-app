@@ -14,7 +14,9 @@ module BigosApp
             BigosApp::GalleryElement,
             BigosApp::ProductElement
         ]
-        a << BigosApp::BigosTwitterBoxElement  if Object.const_get("BigosTwitterBox")
+
+        a << BigosApp::BigosTwitterBoxElement unless Object.const_get("BigosTwitterBox").blank?
+        a
       end
 
       def class_name
