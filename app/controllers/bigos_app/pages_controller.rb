@@ -1,11 +1,11 @@
-require_dependency "bigos_twitter_module/application_controller"
+require_dependency "bigos_app/application_controller"
 
 module BigosApp
   class PagesController < ApplicationController
 
     def index
       @page = BigosApp::Page.first
-      render template: @page.template || "bigos_twitter_module/pages/show"
+      render template: @page.template || "bigos_app/pages/show"
     end
 
     def show

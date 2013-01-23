@@ -1,16 +1,16 @@
-require_dependency "bigos_twitter_module/admin/base_controller"
+require_dependency "bigos_app/admin/base_controller"
 
 module BigosApp
   class Admin::PagesController < Admin::BaseController
 
     def new
       @page = BigosApp::Page.new
-      @files = Dir.glob("app/views/bigos_twitter_module/pages/*")
+      @files = Dir.glob("app/views/bigos_app/pages/*")
     end
 
     def edit
       @page = BigosApp::Page.find(params[:id])
-      @files = Dir.glob("app/views/bigos_twitter_module/pages/*")
+      @files = Dir.glob("app/views/bigos_app/pages/*")
     end
 
     def show
@@ -22,7 +22,7 @@ module BigosApp
       @page_template = BigosApp::PageTemplate.find params[:page][:page_template_id]
 
       if (@page.save)
-       @page_template.getPageElements @page.id
+        @page_template.getPageElements @page.id
         redirect_to action: :show, :id=>@page.id
       else
         redirect_to action: :new
