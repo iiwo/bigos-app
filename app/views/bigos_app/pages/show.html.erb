@@ -7,7 +7,7 @@
             render partial: "#{pe.gallery.is_background ? 'bigos_app/galleries/background' : 'bigos_app/galleries/item'}", locals: {g:pe.gallery}
           when BigosApp::ProductElement.to_s
             render partial: "bigos_app/products/item", locals: {pc:pe.product_category}
-          when BigosApp::Twitter.to_s
+          when BigosApp::BigosTwitterBoxElement.to_s
             render partial: "bigos_app/bigos_twitter_module/item", locals: {pc:pe.product_category}
           else
             pe.class.class_name
