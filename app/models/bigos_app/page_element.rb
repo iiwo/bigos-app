@@ -16,8 +16,8 @@ module BigosApp
         ]
 
 
-        a << BigosApp::BigosTwitterBoxElement unless defined?(BigosApp::BigosTwitterBox).blank?
-        a << BigosApp::BigosInstagramBoxElement unless defined?(BigosApp::BigosInstagramBox).blank?
+        a << BigosApp::BigosTwitterBoxElement unless defined?(BigosTwitterBox).blank?
+        a << BigosApp::BigosInstagramBoxElement unless defined?(BigosInstagramBox).blank?
         a
       end
 
