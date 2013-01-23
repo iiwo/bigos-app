@@ -9,7 +9,12 @@ module BigosApp
     class << self
 
       def subclasses
-        [BigosApp::TextBlockElement, BigosApp::GalleryElement, BigosApp::ProductElement]
+        a = [
+            BigosApp::TextBlockElement,
+            BigosApp::GalleryElement,
+            BigosApp::ProductElement
+        ]
+        a << Object.const_get("BigosTwitterBox")
       end
 
       def class_name
