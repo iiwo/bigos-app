@@ -21,7 +21,7 @@ Gem::Specification.new do |s|
   s.add_dependency "sass-rails"
   s.add_dependency "coffee-rails"
   s.add_dependency "compass-rails"
-  s.add_dependency "zurb-foundation"
+  #s.add_dependency "zurb-foundation"
   s.add_dependency "devise"
   s.add_dependency "cancan"
   s.add_dependency "simple_roles"
