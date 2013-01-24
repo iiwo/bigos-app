@@ -36,6 +36,7 @@ Gem::Specification.new do |s|
   s.add_dependency "cocoon"
   s.add_dependency "rmagick"
   s.add_dependency "fog"
+  s.add_dependency "rails-settings-cached"
 
 
   s.add_development_dependency "pg"
