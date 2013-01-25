@@ -6,7 +6,7 @@ BigosApp::Engine.routes.draw do
   }
 
   namespace :admin do
-    resources :pages, :page_templates
+    resources :pages, :page_templates, :settings
     root :to=>"pages#index"
   end
 

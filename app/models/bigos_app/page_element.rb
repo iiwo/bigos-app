@@ -2,8 +2,6 @@ module BigosApp
 
   class PageElement < ActiveRecord::Base
 
-    #include RailsSettings::Extend
-
     attr_accessible :is_admin_visible, :name, :type, :page_id, :position,
                     :text_block_attributes, :gallery_attributes, :product_category_attributes
     has_one :page_module
@@ -12,11 +10,13 @@ module BigosApp
     class << self
 
       def subclasses
+
         a = [
             BigosApp::TextBlockElement,
             BigosApp::GalleryElement,
             BigosApp::ProductElement
         ]
+
 
         a << BigosApp::BigosContactBoxElement unless defined?(BigosContactBox).blank?
         a << BigosApp::BigosTwitterBoxElement unless defined?(BigosTwitterBox).blank?
