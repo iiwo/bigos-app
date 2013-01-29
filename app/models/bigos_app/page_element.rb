@@ -17,12 +17,10 @@ module BigosApp
             BigosApp::ProductElement.name
         ]
 
-        BigosApp::InstaledModule.all.each do |m|
+        BigosApp::InstalledModule.all.each do |m|
           a << m.page_element
         end
-        #a << BigosApp::BigosContactBoxElement unless defined?(BigosContactBox).blank?
-        #a << BigosApp::BigosTwitterBoxElement unless defined?(BigosTwitterBox).blank?
-        #a << BigosApp::BigosInstagramBoxElement unless defined?(BigosInstagramBox).blank?
+
         a
       end
 
