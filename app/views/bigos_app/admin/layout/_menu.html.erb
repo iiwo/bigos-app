@@ -1,3 +1,6 @@
+<% if current_admin_user.is_superadmin? %>
+  <%= link_to "ADD PAGE", new_admin_page_path, class: "secondary button" %>
+<% end %>
 <ul class="nav-bar vertical">
 <% @pages.all.each do |page| %>
   <li class="<%= page.subpages.length > 0 ? 'has-flyout' : '' %>">
@@ -17,6 +20,3 @@
   </li>
 <% end %>
 </ul>
-<% if current_admin_user.is_superadmin? %>
-    <%= link_to "ADD PAGE", new_admin_page_path %>
-<% end %>
