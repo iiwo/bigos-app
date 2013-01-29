@@ -17,6 +17,16 @@ module BigosApp
     def name
       self.product_category.name
     end
+
+    def render
+      "bigos_app/products/item"
+    end
+
+    def admin_render
+      "bigos_app/admin/products/form"
+    end
+
+
   end
 
 end

@@ -2,15 +2,15 @@
 <% @page.page_elements.each do |pe| %>
     <%= case pe.class.to_s
           when BigosApp::TextBlockElement.to_s
-            render partial: "bigos_app/text_blocks/item", locals: {tb:pe.text_block}
+            render partial: pe.render, locals: {pe:pe}
           when BigosApp::GalleryElement.to_s
             render partial: "#{pe.gallery.is_background ? 'bigos_app/galleries/background' : 'bigos_app/galleries/item'}", locals: {g:pe.gallery}
           when BigosApp::ProductElement.to_s
-            render partial: "bigos_app/products/item", locals: {pc:pe.product_category}
+            render partial: pe.render, locals: {pe:pe}
           when BigosApp::BigosTwitterBoxElement.to_s
-            render partial: "bigos_app/bigos_twitter_module/item"
+            render partial: pe.render, locals: {pe:pe}
           when BigosApp::BigosInstagramBoxElement.to_s
-            render partial: "bigos_app/bigos_instagram_module/item"
+            render partial: pe.render, locals: {pe:pe}
           when BigosApp::BigosContactBoxElement.to_s
             render partial: "bigos_app/bigos_contact_module/item"
           else

@@ -17,5 +17,13 @@ module BigosApp
       self.text_block.title
     end
 
+    def render
+      "bigos_app/text_blocks/item"
+    end
+
+    def admin_render
+      "bigos_app/admin/text_blocks/form"
+    end
+
   end
 end

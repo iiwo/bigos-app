@@ -5,5 +5,13 @@ module BigosApp
       "Twitter module"
     end
 
+    def render
+      "bigos_app/bigos_twitter_module/item"
+    end
+
+    def admin_render
+      nil
+    end
+
   end
 end
