@@ -1,8 +1,8 @@
 <%= simple_form_for [:admin,@page_template] do |f| %>
   <%= f.input :name %>
   <% BigosApp::PageElement.subclasses.each do |subclass| %>
-    <%= label_tag subclass.class_name %>
-      <%= number_field_tag "elements[#{subclass.name}]", @elements.blank? ? nil : @elements[subclass.name], :in => 0...21, :class => "element" %>
+    <%= label_tag eval(subclass).class_name %>
+      <%= number_field_tag "elements[#{subclass}]", @elements.blank? ? nil : @elements[subclass], :in => 0...21, :class => "element" %>
     <% end %>
   <%= f.button :submit %>
 <% end %>

@@ -12,13 +12,13 @@ module BigosApp
       def subclasses
 
         a = [
-            BigosApp::TextBlockElement,
-            BigosApp::GalleryElement,
-            BigosApp::ProductElement
+            BigosApp::TextBlockElement.name,
+            BigosApp::GalleryElement.name,
+            BigosApp::ProductElement.name
         ]
 
         BigosApp::InstaledModule.all.each do |m|
-          a << m.page_element.constantize
+          a << m.page_element
         end
         #a << BigosApp::BigosContactBoxElement unless defined?(BigosContactBox).blank?
         #a << BigosApp::BigosTwitterBoxElement unless defined?(BigosTwitterBox).blank?
