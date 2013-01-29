@@ -1,4 +1,4 @@
-<%= link_to "Add new page template", new_admin_page_template_path, class: "secondary button" %>
+<%= link_to "Add new page template&rarr;", new_admin_page_template_path, class: "secondary button" %>
 <% if current_admin_user.is_superadmin? %>
     <ul class="nav-bar vertical">
         <% @page_templates.each do |page_template| %>
