@@ -1,5 +1,5 @@
 <% if current_admin_user.is_superadmin? %>
-  <%= link_to "Add new page&rarr;", new_admin_page_path, class: "secondary button" %>
+  <%= link_to "Add  new page", new_admin_page_path, class: "secondary button" %>
 <% end %>
 <ul class="nav-bar vertical">
 <% @pages.all.each do |page| %>
