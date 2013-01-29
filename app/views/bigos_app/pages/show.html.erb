@@ -12,7 +12,7 @@
           when BigosApp::BigosInstagramBoxElement.to_s
             render partial: pe.render, locals: {pe:pe}
           when BigosApp::BigosContactBoxElement.to_s
-            render partial: "bigos_app/bigos_contact_module/item"
+            render partial: pe.render, locals: {pe:pe}
           else
             pe.class.class_name + " " + pe.class.to_s
         end %>
