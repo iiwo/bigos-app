@@ -1,19 +1,4 @@
 <h2><%= @page.label %></h2>
 <% @page.page_elements.each do |pe| %>
-    <%= case pe.class.to_s
-          when BigosApp::TextBlockElement.to_s
-            render partial: pe.render, locals: {pe:pe}
-          when BigosApp::GalleryElement.to_s
-            render partial: "#{pe.gallery.is_background ? 'bigos_app/galleries/background' : 'bigos_app/galleries/item'}", locals: {g:pe.gallery}
-          when BigosApp::ProductElement.to_s
-            render partial: pe.render, locals: {pe:pe}
-          when BigosApp::BigosTwitterBoxElement.to_s
-            render partial: pe.render, locals: {pe:pe}
-          when BigosApp::BigosInstagramBoxElement.to_s
-            render partial: pe.render, locals: {pe:pe}
-          when BigosApp::BigosContactBoxElement.to_s
-            render partial: pe.render, locals: {pe:pe}
-          else
-            pe.class.class_name + " " + pe.class.to_s
-        end %>
+    <%= render partial: pe.render, locals: {pe:pe} %>
 <% end %>

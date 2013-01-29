@@ -20,5 +20,13 @@ module BigosApp
       self.gallery.title
     end
 
+    def render
+      self.gallery.is_background ? 'bigos_app/galleries/background' : 'bigos_app/galleries/item'
+    end
+
+    def admin_render
+      "bigos_app/admin/galleries/form"
+    end
+
   end
 end

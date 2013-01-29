@@ -18,16 +18,7 @@
             <div class="content">
               <%= pe.input :position %>
                 <%= case pe.object.class.to_s
-                  when BigosApp::TextBlockElement.to_s
-                    render partial: pe.object.admin_render, locals: {pe:pe}
-                  when BigosApp::GalleryElement.to_s
-                    pe.simple_fields_for :gallery do |g|
-                      render partial: "bigos_app/admin/galleries/form", locals: {g:g}
-                    end
-                  when BigosApp::ProductElement.to_s
-                    pe.simple_fields_for :product_category do |pc|
-                      render partial: "bigos_app/admin/product_categories/form", locals: {pc:pc}
-                    end
+                  render partial: pe.object.admin_render, locals: {pe:pe}
                 end %>
             </div>
           </li>
