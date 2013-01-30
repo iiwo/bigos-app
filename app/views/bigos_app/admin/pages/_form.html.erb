@@ -17,7 +17,7 @@
             </div>
             <div class="content">
               <%= pe.input :position %>
-              <%= render partial: pe.object.admin_render, locals: {pe:pe} %>
+              <%= render partial: pe.object.admin_render, locals: {pe:pe} unless pe.object.admin_render.blank? %>
             </div>
           </li>
       <% end %>
