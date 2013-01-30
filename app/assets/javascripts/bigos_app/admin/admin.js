@@ -3,6 +3,7 @@
 //= require foundation
 //= require tinymce
 //= require cocoon
+//= require pages
 
 
 
