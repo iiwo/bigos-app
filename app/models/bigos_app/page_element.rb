@@ -6,6 +6,7 @@ module BigosApp
                     :text_block_attributes, :gallery_attributes, :product_category_attributes
     has_one :page_module
 
+    default_scope order('position')
 
     class << self
 
