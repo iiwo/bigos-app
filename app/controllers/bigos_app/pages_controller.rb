@@ -5,12 +5,12 @@ module BigosApp
 
     def index
       @page = BigosApp::Page.first
-      render template: @page.template || "bigos_app/pages/show"
+      render template: @page.template || "bigos_app/pages/show" unless @page.blank?
     end
 
     def show
       @page = BigosApp::Page.find(params[:id])
-      render template: @page.render_template
+      render template: @page.render_template unless @page.blank?
     end
 
   end
