@@ -36,6 +36,7 @@ module BigosApp
       desc "Copies BigosApp views to your application."
 
       source_root File.expand_path("../../../../app/views/bigos_app", __FILE__)
+      source_root File.expand_path("../../../../app/views/layouts/bigos_app", __FILE__)
       hide!
     end
   end
