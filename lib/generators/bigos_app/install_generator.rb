@@ -8,6 +8,10 @@ module BigosApp
         template "carrierwave.rb", "config/initializers/carrierwave.rb"
       end
 
+      def include_routes
+        route 'mount BigosApp::Engine => "/"'
+      end
+
     end
   end
 end
