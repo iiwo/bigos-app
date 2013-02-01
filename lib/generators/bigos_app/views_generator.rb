@@ -17,7 +17,7 @@ module BigosApp
       end
 
       def copy_views
-        view_directory "/"
+        view_directory :bigos_app
       end
 
       protected
