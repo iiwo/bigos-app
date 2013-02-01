@@ -2,7 +2,7 @@ require_dependency "bigos_app/application_controller"
 
 module BigosApp
   class Admin::BaseController < ApplicationController
-    layout "bigos-app/admin"
+    layout "bigos_app/admin"
     before_filter :authenticate_admin_user!
 
     private

@@ -1,6 +1,6 @@
 module BigosApp
   class ApplicationController < ActionController::Base
-    layout "bigos-app/application"
+    layout "bigos_app/application"
     before_filter :load_menu_data
 
     private
