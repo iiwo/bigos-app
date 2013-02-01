@@ -17,7 +17,7 @@ module BigosApp
       end
 
       def copy_views
-        view_directory :bigos_app
+        view_directory "."
       end
 
       protected
@@ -35,8 +35,8 @@ module BigosApp
       include ViewPathTemplates
       desc "Copies BigosApp views to your application."
 
-      source_root File.expand_path("../../../../app/views", __FILE__)
-      source_root File.expand_path("../../../../app/views/layouts", __FILE__)
+      source_root File.expand_path("../../../../app/views/bigos_app", __FILE__)
+      source_root File.expand_path("../../../../app/views/layouts/bigos_app", __FILE__)
       hide!
     end
   end
