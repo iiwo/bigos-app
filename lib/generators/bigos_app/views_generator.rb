@@ -6,7 +6,7 @@ module BigosApp
 
       included do
         class_option :markerb
-        #public_task :copy_views
+        public_task :copy_views
       end
 
 
@@ -16,9 +16,9 @@ module BigosApp
         end
       end
 
-      #def copy_views
-      #  view_directory :module
-      #end
+      def copy_views
+        view_directory "/"
+      end
 
       protected
 
