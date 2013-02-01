@@ -3,6 +3,8 @@ module BigosApp
     attr_accessible :elements, :is_visible, :name, :position, :type
     has_many :pages
 
+    validates :name, :presence => true
+
     def getPageElements page_id
       @elements = JSON.parse(self.elements) unless self.elements.blank?
       @elements.each do |element|
