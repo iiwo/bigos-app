@@ -27,15 +27,15 @@ module BigosApp
       end
 
       def target_path
-        @target_path ||= "app/views/bigos_app"
+        @target_path ||= "app/views/layouts/bigos_app"
       end
     end
 
-    class ViewsGenerator < Rails::Generators::Base
+    class LayoutGenerator < Rails::Generators::Base
       include ViewPathTemplates
-      desc "Copies BigosApp views to your application."
+      desc "Copies BigosApp layout to your application."
 
-      source_root File.expand_path("../../../../app/views/bigos_app", __FILE__)
+      source_root File.expand_path("../../../../app/views/layouts/bigos_app", __FILE__)
       hide!
     end
   end
