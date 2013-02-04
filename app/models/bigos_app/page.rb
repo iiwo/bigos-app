@@ -9,7 +9,7 @@ module BigosApp
     before_update :check_template
     has_many :background_elements, :class_name=>"BigosApp::GalleryElement"
 
-    validates :page_template, :label, :name, :presence => true
+    validates :page_template, :label, :name, :position, :presence => true
 
     accepts_nested_attributes_for :page_elements
 
