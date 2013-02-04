@@ -13,7 +13,7 @@ module BigosApp
 
     accepts_nested_attributes_for :page_elements
 
-    scope :root, ->{where(:parent_page_id=>nil)}
+    scope :root, ->{where(:parent_page_id=>nil).order(:position)}
 
     def check_template
       if Page.find(self.id).page_template_id != self.page_template_id
