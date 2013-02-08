@@ -10,15 +10,10 @@ module BigosApp
     class << self
 
       def subclasses
-
-        a = [
-            BigosApp::TextBlockElement.name,
-        ]
-
+        a = []
         BigosApp::InstalledModule.all.each do |m|
           a << m.page_element
         end
-
         a
       end
 
