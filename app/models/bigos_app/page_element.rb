@@ -10,11 +10,7 @@ module BigosApp
     class << self
 
       def subclasses
-        a = []
-        BigosApp::InstalledModule.all.each do |m|
-          a << m.page_element
-        end
-        a
+        BigosApp::InstalledModule.all.map(&:page_element)
       end
 
       def class_name
