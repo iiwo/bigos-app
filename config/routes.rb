@@ -12,5 +12,5 @@ BigosApp::Engine.routes.draw do
 
   resources :pages
   root :to=>"pages#index"
-
+  match '/:id' => 'pages#show', :via => 'get'
 end
