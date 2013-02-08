@@ -11,6 +11,7 @@ require "tinymce-rails"
 require "cocoon"
 require "carrierwave"
 require "fog"
+require "friendly_id"
 
 module BigosApp
 
