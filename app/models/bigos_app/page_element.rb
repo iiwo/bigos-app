@@ -2,7 +2,7 @@ module BigosApp
 
   class PageElement < ActiveRecord::Base
 
-    attr_accessible :is_admin_visible, :name, :type, :page_id, :position, :text_block_attributes
+    attr_accessible :is_admin_visible, :name, :type, :page_id, :position
     has_one :page_module
 
     default_scope order('position')
