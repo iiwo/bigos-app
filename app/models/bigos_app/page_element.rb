@@ -14,7 +14,6 @@ module BigosApp
 
         a = [
             BigosApp::TextBlockElement.name,
-            BigosApp::GalleryElement.name,
         ]
 
         BigosApp::InstalledModule.all.each do |m|
